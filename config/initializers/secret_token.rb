@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Cs4440Project::Application.config.secret_key_base = '45854159202568d907480400845044928188dcca135170a27870363c510a35e57557a52f9c558f6788f0c694065fea778015b1564cebbd4260f62015728e3eba'
+Cs4440Project::Application.config.secret_key_base = 'b48b8b098b03653afbd531b00f59f564d9f4d1681469fef9851e0ddfcf50886dc9dc349feed2b935c686db2b79c704c5208f99545ddcc864ba4422de96375ee3'
