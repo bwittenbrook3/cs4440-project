@@ -3,7 +3,7 @@ development:
   sessions:
     # Defines the default session. (required)
     default:
-      uri:  mongodb://heroku_app23641068:tfefpfh3dbm5gt3ad44ugpkuh9@ds037067.mongolab.com:37067/heroku_app23641068
+      uri:  <%= ENV['MONGOLAB_URI'] %>
       # Defines the name of the default database that Mongoid can connect to.
       # (required).
       #database: cs4440_project_development
@@ -68,12 +68,10 @@ test:
         # low amounts for fast failures.
         max_retries: 1
         retry_interval: 0
-<% if ENV['MONGOLAB_URI'] %>
-  production:
-    sessions:
-      default:
-        uri: <%= ENV['MONGOLAB_URI'] %>
-        options:
-          skip_version_check: true
-          safe: true
-<% end %>
+production:
+  sessions:
+    default:
+      uri: <%= ENV['MONGOLAB_URI'] %>
+      options:
+        skip_version_check: true
+        safe: true
