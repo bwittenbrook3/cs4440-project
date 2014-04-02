@@ -40,9 +40,11 @@
 // to make views framework-neutral
 main {
   @include twelve-columns;
-  background-color: #eee;
   }
 section {
   @extend .row;
-  margin-top: 20px;
   }
+
+ .alert-box{
+  margin-top: $paragraph-margin-bottom;
+ }

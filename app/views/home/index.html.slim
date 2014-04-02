@@ -1,1 +1,27 @@
-h3 Hello, World!
+h1 Ars Magica
+h4.subheader Advanaced image techniques utilizing NoSQL in Ruby on Rails
+
+p The overarching goal of this project is to research store, index, and load times of pictures in a Ruby on Rails application. As such, we will develop a web based photo sharing and browsing application. The application will allow users to tag photos and share their photos as well as provide a tool for searching and browsing photos other users have uploaded. With such a photo-centric application, we seek to understand best practices of utilizing modern database systems to improve user experience with unstructured data like photos. 
+
+hr 
+
+h3 Problem Definition
+p Storing photos in a database is a more difficult task than it sounds. For instance how does the data get stored in the database, how is the picture serialized as it moves across the network to get stored, and finally, how are pictures indexed and tagged. This project will cover all three of the aspects, and attempt to develop solutions to these problems.
+
+p Furthermore, the project will seek to minimize the load time of the pictures through exploring various database technologies including: postgresql, mongodb, and sqlite. Another point for exploration will be using IMDS to “eager load” pictures from the database. Lastly, we will examine the use of caching features in order to provide asynchronous transfer of predicted picture data through AJAX and any other to-be identified techniques.
+
+p The project will provide a comparison of the different db techniques and analyze the best way to store, index, and load pictures in a Ruby on Rails application.
+
+hr
+
+h3 Project Scope
+p The scope of this project will be limited to creating a working prototype of a photo sharing web-based application. This will include a database, web portal, and GUI for browsing the photos. Included within this scope will be a thorough examination of the performance of a set of to be identified database candidates such as postgresql, mongodb, and redis.
+
+hr
+
+h3 Detailed Design
+p The project will be Ruby on Rails application using a number of different gems for added functionality. Perhaps the most important gem will be using is called Dragonfly, this gem provide many utility function for working with various file types within a rails application. It has many options for customization and  improvement which we will set out to accomplish in this project.
+
+p Furthermore, this project and its associated databases will be hosted on Heroku (found at heroku.com). This will enable consistent test across the systems as they will be hosted in the same datacenter. We will pursue all options for testing that Heroku allows, this could be a topic for further research in our presentation.
+
+p Additionally, we will use the framework called Foundation for our front end design. This will be complemented through the use of unobtrusive javascript to enable a streamlined user interface through asynchronous communication. This will be further bolstered through the use of caching features such as the Rails 4.0 feature called Turbo Links. We will explore alternatives as well to provide a best case solution to the caching of the photos. As a whole we will provide a comparison between the different technologies and visually inform the user of how it has impacted their photo viewing experiences.
