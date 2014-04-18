@@ -1,6 +1,8 @@
 // import the CSS framework
 @import "foundation";
 
+$label-font-sizing: rem-calc(24);
+
 // override for the 'Home' navigation link
 .top-bar .name {
   font-size: rem-calc(13);

@@ -14,3 +14,20 @@
  *= require_self
  */
 
+.no-right-padding{
+	padding-right: 0
+}
+
+a.th {
+	margin-left: 10px;
+}
+
+.label {
+	font-size: 18px;
+	margin-left: 10px;
+	span a {
+		color: #d14;
+	}
+}
+
+

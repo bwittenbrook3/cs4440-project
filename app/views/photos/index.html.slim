@@ -1,0 +1,7 @@
+h1 Photos
+= link_to "Add Photo", new_photo_path
+hr
+
+- @photos.each do |photo|
+	a href=photo_path(photo) class="th [radius]"
+	 = image_tag photo.image.thumb('x100').url

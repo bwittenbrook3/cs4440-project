@@ -17,6 +17,13 @@ gem 'rolify'
 gem 'slim-rails'
 gem 'therubyracer', :platform=>:ruby
 gem 'thin'
+
+# Used for working with images
+gem 'dragonfly', "~>1.0.3"
+
+# Used for simple form creation
+gem 'simple_form'
+
 group :production do
   gem 'rails_12factor'
 end

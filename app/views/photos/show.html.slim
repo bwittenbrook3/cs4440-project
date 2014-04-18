@@ -1,0 +1,18 @@
+h4 = @photo.image_name
+
+hr
+
+.medium-4.columns
+	= form_tag photo_tags_path(@photo), id: "add_tag_form", remote: true
+		= search_field_tag "tag[name]"
+		a.button href="#" onclick="javascript:$('#add_tag_form').submit();" Add Tag
+	hr
+	#tag_list.clearfix
+		- @photo.tags.each do |tag|
+			= render partial: "tags/tag", locals: {tag: tag}
+
+javascript:
+	$("main").addClass("no-right-padding");
+
+.medium-8.columns.no-right-padding
+	= image_tag @photo.image.thumb("1000x").url, width: "100%"

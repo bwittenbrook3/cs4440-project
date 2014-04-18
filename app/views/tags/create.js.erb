@@ -1,0 +1,4 @@
+<% if @tag %>
+	$("<%=j render(@tag) %>").appendTo("#tag_list");
+<% end %>
+$("#tag_name").val("");

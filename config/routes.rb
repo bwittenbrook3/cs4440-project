@@ -1,4 +1,13 @@
 Cs4440Project::Application.routes.draw do
+
+
+	# Image resource routes
+	resources :photos do
+		resources :tags
+	end
+
+	resources :tags
+
   root :to => "home#index"
   resources :users, :only => [:index, :show, :edit, :update ]
   get '/auth/:provider/callback' => 'sessions#create'

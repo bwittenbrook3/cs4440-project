@@ -1,0 +1,4 @@
+.left = div_for (tag)
+	span.label.secondary.round 
+		= link_to tag.name, tag_path(tag)
+		span = link_to " x", photo_tag_path(@photo, tag), method: :delete, remote: true
