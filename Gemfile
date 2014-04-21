@@ -20,9 +20,13 @@ gem 'thin'
 
 # Used for working with images
 gem 'dragonfly', "~>1.0.3"
+gem 'dragonfly-s3_data_store'
 
 # Used for simple form creation
 gem 'simple_form'
+
+# Searching
+gem "searchkick"
 
 group :production do
   gem 'rails_12factor'
