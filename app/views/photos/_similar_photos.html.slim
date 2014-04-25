@@ -1,0 +1,4 @@
+- similar.each do |s|
+	- if s != photo
+		a.th href=photo_path(s) 
+			= image_tag s.image.thumb("x80").url

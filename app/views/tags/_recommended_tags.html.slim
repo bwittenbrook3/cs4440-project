@@ -1,0 +1,1 @@
+= raw(syns.map{|s| link_to s, photo_tags_path(photo, tag: {name: s}), remote: true, method: :post}.join(", "))

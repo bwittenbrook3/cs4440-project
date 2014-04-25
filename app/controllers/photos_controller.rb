@@ -14,6 +14,8 @@ class PhotosController < ApplicationController
 
 	def show
 		@photo = Photo.find(params[:id])
+		@syns = @photo.associated_tags
+		@similar = Photo.search @photo.tags.pluck(:name).join(", "), operator: "or"
 	end
 
 	private

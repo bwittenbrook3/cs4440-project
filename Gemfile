@@ -28,6 +28,8 @@ gem 'simple_form'
 # Searching
 gem "searchkick"
 
+gem 'redis'
+
 group :production do
   gem 'rails_12factor'
 end

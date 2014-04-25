@@ -2,3 +2,5 @@
 	$("<%=j render(@tag) %>").appendTo("#tag_list");
 <% end %>
 $("#tag_name").val("");
+$("#suggested_tags").html("<%=j render partial: 'tags/recommended_tags', locals: {syns: @syns, photo: @photo} %>");
+$("#similar_photos").html("<%=j render partial: 'photos/similar_photos', locals: {similar: @similar, photo: @photo} %>");
