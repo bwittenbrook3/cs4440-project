@@ -20,7 +20,8 @@ Dragonfly.app.configure do
     thumb = Thumb.where(signature: job.signature).first
     # If (fetch 'some_uid' then resize to '40x40') has been stored already, give the datastore's remote url ...
     if thumb
-      "http://d1g1dresthe9tw.cloudfront.net/#{thumb.uid}"
+      # "http://[cloudfront_url].cloudfront.net/#{thumb.uid}"   <= cloudfront
+      "https://s3.amazonaws.com/fido-api-bucket/#{thumb.uid}" # <=  s3
     # ...otherwise give the local Dragonfly server url
     else
       app.server.url_for(job)

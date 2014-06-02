@@ -7,7 +7,7 @@ class TagsController < ApplicationController
 		@syns = @photo.associated_tags
 		@photo.extended_tags_list = @photo.tags.pluck(:name).join(", ") + ", " + @syns.join(", ")
 		@photo.save
-		@similar = Photo.search @photo.tags.pluck(:name).join(", "), operator: "or"
+		@similar = @photo.similar(fields: ["extended_tags_list"])
 
 		respond_to do |format|
 			format.html { redirect_to photo_path(@photo) }
@@ -22,7 +22,7 @@ class TagsController < ApplicationController
 		@syns = @photo.associated_tags
 		@photo.extended_tags_list = @photo.tags.pluck(:name).join(", ") + ", " + @syns.join(", ")
 		@photo.save
-		@similar = Photo.search @photo.tags.pluck(:name).join(", "), operator: "or"
+		@similar = @photo.similar(fields: ["extended_tags_list"])
 
 		respond_to do |format|
 			format.html { redirect_to photo_path(@photo) }
